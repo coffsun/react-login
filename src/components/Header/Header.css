@@ -1,0 +1,19 @@
+.signin-btn, .signout-btn {
+  font-weight: bold;
+}
+
+.signout-btn {
+  margin-right: 10px;
+  cursor: pointer;
+  color: #6d4444;
+}
+
+.signin-btn {
+  margin-right: 10px;
+  cursor: pointer;
+  color: floralwhite;
+}
+
+.menu-btn {
+  padding-left: 10px;
+}
