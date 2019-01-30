@@ -2,7 +2,7 @@
 
 
 ## What is it?
-`react-login` is an example React login project.
+`react-login` is an example React project for login.
 
 
 ## Installation
