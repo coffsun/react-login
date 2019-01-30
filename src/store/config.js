@@ -1,13 +1,9 @@
-import { createStore, applyMiddleware, combineReducers, compose } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import thunkMiddleware from "redux-thunk";
 import { createLogger } from "redux-logger";
-import authentication from "../reducers/authentication";
+import reducers from "../reducers";
 
 const logger = createLogger();
-const rootReducer = combineReducers({
-  authentication
-});
-
 const initialState = {};
 
 export default function configureStore() {
@@ -15,7 +11,7 @@ export default function configureStore() {
   
   if (module.hot) {
     store = createStore(
-      rootReducer,
+      reducers,
       initialState,
       compose(
         applyMiddleware(thunkMiddleware, logger),
@@ -24,7 +20,7 @@ export default function configureStore() {
     );
   } else {
     store = createStore(
-      rootReducer,
+      reducers,
       initialState,
       compose(applyMiddleware(thunkMiddleware), f => f)
     );

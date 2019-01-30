@@ -10,6 +10,7 @@ import './index.css';
 // Load env
 dotenv.config();
 
+// Create store
 const store = configureStore();
 
 // Render
